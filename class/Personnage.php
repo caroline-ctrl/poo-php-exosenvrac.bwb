@@ -201,4 +201,33 @@ class Personnage
     {
         $this->arme = $arme;
     }
+
+
+    /****************************/
+    /******SPECIFIC MEHTODS******/
+    /***************************/
+
+    public function attaquer(){
+
+    }
+
+    public function soigner(){
+
+    }
+
+    public function boire(){
+
+    }
+
+    public function manger(){
+
+    }
+
+    public function interagir(){
+
+    }
+
+    public function seDeplacer($x, $y){
+
+    }
 }
