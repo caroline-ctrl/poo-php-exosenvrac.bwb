@@ -13,7 +13,10 @@ class Personnage
     private $arme;
 
 
+    
+    /************************/
     /*********GETTER********/
+    /***********************/
 
     /**
      * return $force
@@ -88,6 +91,82 @@ class Personnage
     }
 
 
+
+/********************************/
+/***************SETTER***********/
+/*******************************/
+
+    /**
+     * set value $force
+     * type: integer
+     */
+    public function setForce($force){
+        $this->force = $force;
+    }
+
+        /**
+     * set value $force
+     * type: integer
+     */
+    public function setAgilite($agilite){
+        $this->agilite = $agilite;
+    }
+
+        /**
+     * set value $force
+     * type: integer
+     */
+    public function setEndurance($endurance){
+        $this->endurance = $endurance;
+    }
+
+        /**
+     * set value $race
+     * type: string
+     */
+    public function setRace($race){
+        $this->race = $race;
+    }
+
+        /**
+     * set value $archetype
+     * type: string
+     */
+    public function setArchetype($archetype){
+        $this->archetype = $archetype;
+    }
+
+            /**
+     * set value $mana
+     * type: integer
+     */
+    public function setMana($mana){
+        $this->mana = $mana;
+    }
+
+            /**
+     * set value $vie
+     * type: integer
+     */
+    public function setVie($vie){
+        $this->vie = $vie;
+    }
+
+            /**
+     * set value $armure
+     * type: integer
+     */
+    public function setArmure($armure){
+        $this->armure = $armure;
+    }
+
+            /**
+     * set value $arme
+     * type: integer
+     */
+    public function setArme($arme){
+        $this->arme = $arme;
+    }
 
 
 
