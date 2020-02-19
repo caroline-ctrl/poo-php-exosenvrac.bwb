@@ -18,15 +18,15 @@ class Personnage
     /***********************/
     public function __construct($force, $agilite, $endurance, $race, $archetype, $mana, $vie, $arme, $armure)
     {
-        $this->force = $force;
-        $this->agilite = $agilite;
-        $this->endurance = $endurance;
-        $this->race = $race;
-        $this->archetype = $archetype;
-        $this->mana = $mana;
-        $this->vie = $vie;
-        $this->armure = $armure;
-        $this->arme = $arme;
+        $this->setForce($force);
+        $this->setAgilite($agilite);
+        $this->setEndurance($endurance);
+        $this->setRace($race);
+        $this->setArchetype($archetype);
+        $this->setMana($mana);
+        $this->setVie($vie);
+        $this->setArmure($armure);
+        $this->setArme($arme);
     }
 
 
@@ -125,7 +125,7 @@ class Personnage
      * set value $force
      * type: integer
      */
-    public function setForce($force)
+    public function setForce(int $force)
     {
         $this->force = $force;
     }
@@ -134,7 +134,7 @@ class Personnage
      * set value $agilite
      * type: integer
      */
-    public function setAgilite($agilite)
+    public function setAgilite(int $agilite)
     {
         $this->agilite = $agilite;
     }
@@ -143,7 +143,7 @@ class Personnage
      * set value $endurance
      * type: integer
      */
-    public function setEndurance($endurance)
+    public function setEndurance(int $endurance)
     {
         $this->endurance = $endurance;
     }
@@ -152,7 +152,7 @@ class Personnage
      * set value $race
      * type: string
      */
-    public function setRace($race)
+    public function setRace(string $race)
     {
         $this->race = $race;
     }
@@ -161,7 +161,7 @@ class Personnage
      * set value $archetype
      * type: string
      */
-    public function setArchetype($archetype)
+    public function setArchetype(string $archetype)
     {
         $this->archetype = $archetype;
     }
@@ -170,7 +170,7 @@ class Personnage
      * set value $mana
      * type: integer
      */
-    public function setMana($mana)
+    public function setMana(int $mana)
     {
         $this->mana = $mana;
     }
@@ -179,7 +179,7 @@ class Personnage
      * set value $vie
      * type: integer
      */
-    public function setVie($vie)
+    public function setVie(int $vie)
     {
         $this->vie = $vie;
     }
@@ -188,7 +188,7 @@ class Personnage
      * set value $armure
      * type: integer
      */
-    public function setArmure($armure)
+    public function setArmure(int $armure)
     {
         $this->armure = $armure;
     }
@@ -197,7 +197,7 @@ class Personnage
      * set value $arme
      * type: integer
      */
-    public function setArme($arme)
+    public function setArme(int $arme)
     {
         $this->arme = $arme;
     }
@@ -207,27 +207,38 @@ class Personnage
     /******SPECIFIC MEHTODS******/
     /***************************/
 
-    public function attaquer(){
+    public function attaquer($vie, $mana){
+        $this->setVie($vie + 10);
+        $this->setMana($mana +10);
+        // $mana = $this->getMana() + 10;
+        // echo 'Vous venez d\'attaquer l\'adversaire, votre barre de vie est maintenant a ' . $this->getVie() . ' points et votre mana est a ' . $mana . ' points.<br/>';
 
     }
 
-    public function soigner(){
+    public function degat($degat){
+        $this->setVie($degat - 50);
+    }
+
+    public function soigner($soins){
+        $this->setVie($soins + 100);
+    }
+
+    public function boire($boire){
+        $this->setMana($boire + 20);
 
     }
 
-    public function boire(){
+    public function manger($manger){
+        $this->setVie($manger + 30);
 
     }
 
-    public function manger(){
+    // // public function interagir(){
 
-    }
+    // // }
 
-    public function interagir(){
+    // public function seDeplacer($x, $y){
 
-    }
-
-    public function seDeplacer($x, $y){
-
-    }
+    // }
 }
+
