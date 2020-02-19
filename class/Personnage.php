@@ -13,7 +13,23 @@ class Personnage
     private $arme;
 
 
-    
+    /************************/
+    /*********CONSTRUCT********/
+    /***********************/
+    public function __construct($force, $agilite, $endurance, $race, $archetype, $mana, $vie, $arme, $armure)
+    {
+        $this->force = $force;
+        $this->agilite = $agilite;
+        $this->endurance = $endurance;
+        $this->race = $race;
+        $this->archetype = $archetype;
+        $this->mana = $mana;
+        $this->vie = $vie;
+        $this->armure = $armure;
+        $this->arme = $arme;
+    }
+
+
     /************************/
     /*********GETTER********/
     /***********************/
@@ -22,152 +38,167 @@ class Personnage
      * return $force
      * type: integer
      */
-    public function getForce(){
+    public function getForce()
+    {
         return $this->force;
     }
 
-        /**
+    /**
      * return $agilite
      * type: integer
      */
-    public function getAgilite(){
+    public function getAgilite()
+    {
         return $this->agilite;
     }
 
-        /**
+    /**
      * return $endurance
      * type: integer
      */
-    public function getEndurance(){
+    public function getEndurance()
+    {
         return $this->endurance;
     }
 
-            /**
+    /**
      * return $race
      * type: string
      */
-    public function getRace(){
+    public function getRace()
+    {
         return $this->race;
     }
 
-        /**
+    /**
      * return $archetype
      * type: string
      */
-    public function getArchetype(){
+    public function getArchetype()
+    {
         return $this->archetype;
     }
 
-        /**
+    /**
      * return $mana
      * type: integer
      */
-    public function getMana(){
+    public function getMana()
+    {
         return $this->mana;
     }
 
-        /**
+    /**
      * return $vie
      * type: integer
      */
-    public function getVie(){
+    public function getVie()
+    {
         return $this->vie;
     }
 
-        /**
+    /**
      * return $armure
      * type: integer
      */
-    public function getArmure(){
+    public function getArmure()
+    {
         return $this->armure;
     }
 
-        /**
+    /**
      * return $arme
      * type: integer
      */
-    public function getarme(){
+    public function getarme()
+    {
         return $this->arme;
     }
 
 
 
-/********************************/
-/***************SETTER***********/
-/*******************************/
+    /********************************/
+    /***************SETTER***********/
+    /*******************************/
 
     /**
      * set value $force
      * type: integer
      */
-    public function setForce($force){
+    public function setForce($force)
+    {
         $this->force = $force;
     }
 
-        /**
-     * set value $force
+    /**
+     * set value $agilite
      * type: integer
      */
-    public function setAgilite($agilite){
+    public function setAgilite($agilite)
+    {
         $this->agilite = $agilite;
     }
 
-        /**
-     * set value $force
+    /**
+     * set value $endurance
      * type: integer
      */
-    public function setEndurance($endurance){
+    public function setEndurance($endurance)
+    {
         $this->endurance = $endurance;
     }
 
-        /**
+    /**
      * set value $race
      * type: string
      */
-    public function setRace($race){
+    public function setRace($race)
+    {
         $this->race = $race;
     }
 
-        /**
+    /**
      * set value $archetype
      * type: string
      */
-    public function setArchetype($archetype){
+    public function setArchetype($archetype)
+    {
         $this->archetype = $archetype;
     }
 
-            /**
+    /**
      * set value $mana
      * type: integer
      */
-    public function setMana($mana){
+    public function setMana($mana)
+    {
         $this->mana = $mana;
     }
 
-            /**
+    /**
      * set value $vie
      * type: integer
      */
-    public function setVie($vie){
+    public function setVie($vie)
+    {
         $this->vie = $vie;
     }
 
-            /**
+    /**
      * set value $armure
      * type: integer
      */
-    public function setArmure($armure){
+    public function setArmure($armure)
+    {
         $this->armure = $armure;
     }
 
-            /**
+    /**
      * set value $arme
      * type: integer
      */
-    public function setArme($arme){
+    public function setArme($arme)
+    {
         $this->arme = $arme;
     }
-
-
-
 }
