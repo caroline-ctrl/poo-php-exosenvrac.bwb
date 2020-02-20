@@ -1,46 +1,46 @@
 <?php
-    /**
-     * set value $race
-     * type: string
-     */
-    public function setRace(string $race)
-    {
-        $this->race = $race;
-    }
 
-    /**
-     * set value $archetype
-     * type: string
-     */
-    public function setArchetype(string $archetype)
+class Race
+{
+    private $nom;
+
+
+    /************************/
+    /*********CONSTRUCT********/
+    /***********************/
+    public function __construct($nom)
     {
-        $this->archetype = $archetype;
+        $this->setNom($nom);
     }
 
 
 
 
-
-        /**
-     * return $race
-     * type: string
-     */
-    public function getRace()
-    {
-        return $this->race;
-    }
+    /************************/
+    /*********GETTER********/
+    /***********************/
 
     /**
-     * return $archetype
+     * return $nom
      * type: string
      */
-    public function getArchetype()
+    public function getNom()
     {
-        return $this->archetype;
+        return $this->nom;
     }
-    private $race;
-    private $archetype;
 
 
-    $this->setRace($race);
-    $this->setArchetype($archetype);
+
+    /********************************/
+    /***************SETTER***********/
+    /*******************************/
+
+    /**
+     * set value $nom
+     * type: string
+     */
+    public function setNom(string $nom)
+    {
+        $this->nom = $nom;
+    }
+}

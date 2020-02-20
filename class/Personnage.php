@@ -1,5 +1,8 @@
 <?php
 
+include('Race.php');
+include('Archetype.php');
+
 class Personnage
 {
     private $nom;
@@ -237,10 +240,8 @@ class Personnage
         // $this->mana += 
     }
 
-    // public function seDeplacer($x, $y){
-    //     public $avancer;
-    //     $droite;
-    //     $gauche;
+    // public function seDeplacer(Personnage $deplaceToi){
+    //     $deplaceToi += 10;
     // }
 }
 
@@ -249,12 +250,16 @@ class Personnage
 
 $oxie = new Personnage('Oxie', 200, 100, 300, 50, 80);
 $canaille =new Personnage('Canaille', 150, 100, 200, 50, 80);
+$elfe = new Race('elfe');
+$fee = new Race('fée');
+$mag = new Archetype('magicien');
+$arc = new Archetype('archer');
 
 
-echo $oxie->getNom() . ':<br>- force : ' . $oxie->getForce() . ' points<br>- mana : ' . $oxie->getMana() . ' points<br>- vie : ' . $oxie->getVie() .
+echo $oxie->getNom() . ':<br>- race : ' . $elfe->getNom() . '<br>- archetype : ' . $mag->getNom() . '<br>- force : ' . $oxie->getForce() . ' points<br>- mana : ' . $oxie->getMana() . ' points<br>- vie : ' . $oxie->getVie() .
  ' points<br>- arme : ' . $oxie->getArme() . ' points<br>- armure : ' . $oxie->getArmure() . ' points<br>';
 
-echo '<br>' . $canaille->getNom() . ':<br>- force : ' . $canaille->getForce() . ' points<br>- mana : ' . $canaille->getMana() . ' points<br>- vie : ' . $canaille->getVie() . ' points<br>- arme : ' . $canaille->getArme() . ' points<br>- armure : ' . $canaille->getArmure() . ' points<br><br>';
+echo '<br>' . $canaille->getNom() . ':<br>- race : ' . $fee->getNom() . '<br>- archetype : ' . $arc->getNom() . '<br>- force : ' . $canaille->getForce() . ' points<br>- mana : ' . $canaille->getMana() . ' points<br>- vie : ' . $canaille->getVie() . ' points<br>- arme : ' . $canaille->getArme() . ' points<br>- armure : ' . $canaille->getArmure() . ' points<br><br>';
 
 
 
